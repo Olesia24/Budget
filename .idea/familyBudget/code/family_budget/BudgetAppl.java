@@ -19,7 +19,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 public class BudgetAppl {
-    private static final String SAVE_PATH = "lesson_68_FamilyBudget/code/family_budget/Family-budget.csv";
+    private static final String SAVE_PATH = "family_budget/Family-budget.csv";
     public static void main(String[] args) throws IOException {
         AtomicInteger idCounter = new AtomicInteger(1);//автоматический счетчик покупок
         List<Purchase> purchaseList = new ArrayList<>();
@@ -28,7 +28,7 @@ public class BudgetAppl {
         BudgetImpl budget = new BudgetImpl(purchaseList, 0);
         LocalDate now = LocalDate.now();
 
-        BufferedReader br=new BufferedReader(new FileReader("lesson_68_FamilyBudget/code/family_budget/products.csv"));
+        BufferedReader br=new BufferedReader(new FileReader("family_budget/products.csv"));
         String str=br.readLine();
         String[] family=str.split(",");
         str= br.readLine();
